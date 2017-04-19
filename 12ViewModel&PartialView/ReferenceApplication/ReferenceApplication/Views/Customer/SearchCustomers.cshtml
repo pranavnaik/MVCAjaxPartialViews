@@ -1,0 +1,26 @@
+﻿@model ReferenceApplication.ViewModel.CustomerVM
+@using ReferenceApplication.Models;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SearchCustomers</title>
+</head>
+<body>
+    <div> 
+        <form action="SearchCustomer" method="post">
+            Enter Customer Name:<input id="txtCustomerName" name="txtCustomerName" type="text" /><br/>
+            <input id="Submit1" type="submit" value="Search Customer" />
+        </form>
+        <br/>
+       
+@Html.Partial("DisplayCustomers", Model)
+    </div>
+</body>
+</html>
